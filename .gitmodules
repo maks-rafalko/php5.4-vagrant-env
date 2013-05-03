@@ -1,3 +1,0 @@
-[submodule "recipes/cookbooks/chef-dotdeb"]
-	path = recipes/cookbooks/chef-dotdeb
-	url = git@github.com:homemade/chef-dotdeb.git
