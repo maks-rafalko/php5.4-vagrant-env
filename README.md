@@ -68,9 +68,9 @@ chef.json = {
 }
 ```
 
-### git submodules
+### Git Submodules
     
-    $ git submodule init && git submodule update
+    $ git submodule update --init --recursive
 
 ### FYI
 
