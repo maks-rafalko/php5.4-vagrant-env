@@ -44,7 +44,29 @@ With Ubuntu:
     $ ... add new line: 11.11.11.11 vm-app
     $ ... save
 
-Then you could run your application on `guest` VM from `host` maching from browser: http://vm-app/
+Then you could run your application on `guest` VM from `host` machine from browser: [http://vm-app/](http://vm-app/)
+
+### Custom VirtualHost and Application
+
+You can overwrite default VirtualHost and application path (as well as DB name and `server_email` values):
+
+Open `Vagrantfile` and modify Ruby Hash:
+
+```ruby
+chef.json = {
+	"app" => {
+		"path" => "/var/www/cool-another-app",
+		"server_name" => "cool-another-app",
+		"server_email" => "cool@another-app.com",
+		"database" => "cool_another_app_db"
+	},
+	"mysql" => {
+		"server_root_password" => "%your_path0%",			
+		"server_repl_password" => "%your_path1%",
+		"server_debian_password" => "%your_path2%"
+	}
+}
+```
 
 ### git submodules
     
