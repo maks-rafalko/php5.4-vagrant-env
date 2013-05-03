@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+   ServerAdmin <%= @params[:server_email] %>
+   ServerName <%= @params[:server_name] %>
+   DocumentRoot <%= @params[:docroot] %>
+    
+   <Directory <%= @params[:docroot] %>>
+      Options Indexes FollowSymLinks MultiViews
+      AllowOverride ALL
+      Order allow,deny
+      Allow from all
+   </Directory>
+  
+   ErrorLog ${APACHE_LOG_DIR}/<%= @params[:server_name] %>.log
+   LogLevel debug
+</VirtualHost>

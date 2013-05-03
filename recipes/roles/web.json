@@ -1,0 +1,9 @@
+{
+  "name": "web",
+  "default_attributes": { },
+  "override_attributes": { },
+  "json_class": "Chef::Role",
+  "description": "web server role",
+  "chef_type": "role",
+  "run_list": ["recipe[apt]", "recipe[chef-dotdeb]", "recipe[chef-dotdeb::php54]", "recipe[apache2]", "recipe[apache2::mod_php5]", "recipe[apache2::mod_rewrite]", "recipe[php]", "recipe[mysql]", "recipe[mysql::server]", "recipe[app]", "recipe[composer]", "recipe[sqlite]", "recipe[vim]", "recipe[cron]", "recipe[ntp]"]
+}
