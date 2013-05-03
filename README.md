@@ -2,7 +2,7 @@
 
 ## Description
 
-Chef solo config files to install a php 5.4 environment that can be used with vagrant.
+Chef solo config files to install a php 5.4 environment that can be used with Vagrant.
 
 ## Includes
 
@@ -22,13 +22,13 @@ Chef solo config files to install a php 5.4 environment that can be used with va
 
 ## Installation
 
-### Install and run vagrant
+### Install and run Vagrant
 
-Install vagrant and then
+Install Vagrant and then
 
     $ vagrant up
 
-When vagrant is done, you could go to http://11.11.11.11 and see php info.
+When Vagrant is done, you could go to http://11.11.11.11 and see php info.
 
 To SSH in to VM, just do
 
@@ -36,7 +36,7 @@ To SSH in to VM, just do
 
 Default application name is `vm-app`. Default application path is `/var/www/vm-app`.
 
-To run your application from `host` machine in your browser, just add ServerName (default is `vm-app`) to your `hosts` file.
+To run your application from `host` machine in your browser, just add the ServerName (default is `vm-app`) to your `hosts` file.
 
 With Ubuntu:
 
@@ -44,7 +44,7 @@ With Ubuntu:
     $ ... add new line: 11.11.11.11 vm-app
     $ ... save
 
-Then you could run your application on `guest` VM from `host` machine from browser: [http://vm-app/](http://vm-app/)
+Then you could run your application on `guest` VM from `host` machine using browser: [http://vm-app/](http://vm-app/)
 
 ### Custom VirtualHost and Application
 
@@ -72,3 +72,6 @@ chef.json = {
     
     $ git submodule init && git submodule update
 
+### FYI
+
+Please remember that VM uses Shared Folders, so each update of any file in `./www` foler will be immediately synced with VM (and vice-versa).
