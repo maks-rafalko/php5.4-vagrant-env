@@ -74,4 +74,4 @@ chef.json = {
 
 ### FYI
 
-Please remember that VM uses Shared Folders, so each update of any file in `./www` foler will be immediately synced with VM (and vice-versa).
+Please don't forget that VM uses Shared Folders, so each update of any file in `./www` foler will be immediately synced with VM (and vice-versa).
