@@ -1,8 +1,8 @@
-# Chef solo PHP 5.4 environment
+# Vagrant PHP 5.4 environment with Chef config
 
 ## Description
 
-Chef solo config files to install a php 5.4 environment that can be used with Vagrant.
+Vagrant with Chef solo config files to install a php 5.4 environment.
 
 ## Includes
 
