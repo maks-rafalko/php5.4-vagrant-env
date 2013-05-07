@@ -51,3 +51,11 @@ end
 package "php5-mysql" do
 	action :install
 end
+
+package "git" do
+    action :install
+end
+
+package "mercurial" do
+    action :install
+end
