@@ -33,3 +33,21 @@ web_app 'app' do
   server_name node['app']['server_name']
   server_email node['app']['server_email']
 end
+
+case node[:platform]
+	when "ubuntu", "debian"
+		execute "install-python-software-properties" do
+		command "apt-get install -y python-software-properties"
+		action :run
+	end
+	
+	# setup a command to add new ppa
+	execute "add-apt-repository" do
+		command "sudo add-apt-repository ppa:ondrej/php5 && sudo apt-get update"
+		action :run
+	end
+end 
+
+package "php5-mysql" do
+	action :install
+end
